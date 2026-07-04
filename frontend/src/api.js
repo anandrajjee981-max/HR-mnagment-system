@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:3000/api',
+    baseURL: 'https://hr-mnagment-system.onrender.com/api',
     withCredentials: true,
 });
 
