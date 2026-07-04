@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "employeeId": "EMP001",
+      "email": "john@company.com",
+      "password": "test1234",
+      "role": "employee",
+      "fullName": "John Doe"
+    },
+    {
+      "id": "2",
+      "employeeId": "EMP002",
+      "email": "admin@company.com",
+      "password": "admin1234",
+      "role": "admin",
+      "fullName": "Sarah Admin"
+    },
+    {
+      "employeeId": "54675",
+      "fullName": "satyam sagar",
+      "email": "myself@gmail.com",
+      "password": "Satyam@1234",
+      "role": "employee",
+      "id": "TcQaz-q8PKk"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "1",
+      "userId": 1,
+      "date": "2026-07-01",
+      "status": "Present"
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "date": "2026-07-02",
+      "status": "Absent"
+    }
+  ],
+  "leaveRequests": [
+    {
+      "id": "1",
+      "userId": 1,
+      "leaveType": "Sick",
+      "startDate": "2026-07-10",
+      "endDate": "2026-07-12",
+      "status": "Pending"
+    }
+  ],
+  "payroll": [
+    {
+      "id": "1",
+      "userId": 1,
+      "baseSalary": 50000,
+      "deductions": 2000,
+      "netSalary": 48000
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
