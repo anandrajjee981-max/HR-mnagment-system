@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+import mongoose from "mongoose"
 
 const attendschema = new mongoose.Schema({
     user: {
@@ -29,13 +29,13 @@ const attendschema = new mongoose.Schema({
         type: Number,
         default: 0
     }
+ 
 
 },
 {
     timestamps:true
 })
 
-module.exports = mongoose.model(
-    "attendance",
-    attendschema
-)
+const attendmodel = mongoose.model( "attendance", attendschema)
+export default attendmodel
+
