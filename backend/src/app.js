@@ -5,6 +5,15 @@ import authrouter from './routes/auth.routes.js'
 import attendrouter from './routes/attend.routes.js'
 import leaverouter from './routes/leave.route.js'
 import adminrouter from './routes/admin.routes.js'
+import cors from 'cors'
+app.use(cors({
+    credentials: true,
+    origin: [
+        "http://localhost:5173",
+      
+        
+    ]
+}));
 app.use(express.json());
 app.use(cookie())
 app.use("/api/auth",authrouter)

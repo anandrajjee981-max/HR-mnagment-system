@@ -6,12 +6,15 @@ import './Auth.css'
 function SignUp() {
   const navigate = useNavigate()
   const [form, setForm] = useState({
-    employeeId: '',
-    fullName: '',
+    name: '',
     email: '',
     password: '',
     confirmPassword: '',
     role: 'employee',
+    department: '',
+    salary: '',
+    phone: '',
+    address: '',
   })
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -21,7 +24,6 @@ function SignUp() {
   }
 
   function validatePassword(password) {
-    // At least 8 chars, one uppercase, one number
     const rule = /^(?=.*[A-Z])(?=.*\d).{8,}$/
     return rule.test(password)
   }
@@ -43,26 +45,26 @@ function SignUp() {
     setLoading(true)
 
     try {
-      // Check if email already exists
-      const existing = await api.get(`/users?email=${form.email}`)
-      if (existing.data.length > 0) {
-        setError('An account with this email already exists')
-        setLoading(false)
-        return
+      const payload = {
+        name: form.name,
+        email: form.email,
+        password: form.password,
+        role: form.role,
+        department: form.department,
+        salary: Number(form.salary) || 0,
+        address: form.address,
+        ...(form.phone ? { phone: Number(form.phone) } : {}),
       }
 
-      // Create the new user
-      await api.post('/users', {
-        employeeId: form.employeeId,
-        fullName: form.fullName,
-        email: form.email,
-        password: form.password, // fine for fake DB only, never do this for real
-        role: form.role,
-      })
-
-      navigate('/') // send them to Sign In after successful signup
+      await api.post('/auth/register', payload)
+      navigate('/')
     } catch (err) {
-      setError('Something went wrong. Is json-server running?')
+      if (err.response?.data?.message) {
+        setError(err.response.data.message)
+      } else {
+        setError('Registration failed. Please try again.')
+      }
+    } finally {
       setLoading(false)
     }
   }
@@ -75,21 +77,11 @@ function SignUp() {
 
         {error && <div className="auth-error">{error}</div>}
 
-        <label htmlFor="employeeId">Employee ID</label>
+        <label htmlFor="name">Full name</label>
         <input
-          id="employeeId"
-          name="employeeId"
-          value={form.employeeId}
-          onChange={handleChange}
-          placeholder="EMP001"
-          required
-        />
-
-        <label htmlFor="fullName">Full name</label>
-        <input
-          id="fullName"
-          name="fullName"
-          value={form.fullName}
+          id="name"
+          name="name"
+          value={form.name}
           onChange={handleChange}
           placeholder="Jane Smith"
           required
@@ -106,11 +98,51 @@ function SignUp() {
           required
         />
 
+        <label htmlFor="department">Department</label>
+        <input
+          id="department"
+          name="department"
+          value={form.department}
+          onChange={handleChange}
+          placeholder="Engineering"
+          required
+        />
+
         <label htmlFor="role">Role</label>
         <select id="role" name="role" value={form.role} onChange={handleChange}>
           <option value="employee">Employee</option>
           <option value="admin">Admin / HR</option>
         </select>
+
+        <label htmlFor="salary">Salary</label>
+        <input
+          id="salary"
+          name="salary"
+          type="number"
+          value={form.salary}
+          onChange={handleChange}
+          placeholder="50000"
+        />
+
+        <label htmlFor="phone">Phone</label>
+        <input
+          id="phone"
+          name="phone"
+          type="number"
+          value={form.phone}
+          onChange={handleChange}
+          placeholder="9876543210"
+        />
+
+        <label htmlFor="address">Address</label>
+        <input
+          id="address"
+          name="address"
+          value={form.address}
+          onChange={handleChange}
+          placeholder="City, State"
+          required
+        />
 
         <label htmlFor="password">Password</label>
         <input

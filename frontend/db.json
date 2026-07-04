@@ -6,7 +6,13 @@
       "email": "john@company.com",
       "password": "test1234",
       "role": "employee",
-      "fullName": "John Doe"
+      "fullName": "John Doe",
+      "phone": "9876543210",
+      "address": "221B Baker Street, London",
+      "jobTitle": "Software Engineer",
+      "department": "Engineering",
+      "joinDate": "2024-03-15",
+      "photoUrl": ""
     },
     {
       "id": "2",
@@ -14,48 +20,549 @@
       "email": "admin@company.com",
       "password": "admin1234",
       "role": "admin",
-      "fullName": "Sarah Admin"
+      "fullName": "Sarah Admin",
+      "phone": "9812345678",
+      "address": "12 Park Avenue, Delhi",
+      "jobTitle": "HR Manager",
+      "department": "Human Resources",
+      "joinDate": "2022-01-10",
+      "photoUrl": ""
     },
     {
+      "id": "TcQaz-q8PKk",
       "employeeId": "54675",
       "fullName": "satyam sagar",
       "email": "myself@gmail.com",
       "password": "Satyam@1234",
       "role": "employee",
-      "id": "TcQaz-q8PKk"
+      "phone": "9123456789",
+      "address": "Patna, Bihar",
+      "jobTitle": "Frontend Developer",
+      "department": "Engineering",
+      "joinDate": "2025-09-01",
+      "photoUrl": ""
+    },
+    {
+      "employeeId": "2610",
+      "fullName": "sam smith",
+      "email": "samsmith@gmail.com",
+      "password": "Asdf@1234",
+      "role": "employee",
+      "id": "YXBTP1zDhyo"
+    },
+    {
+      "employeeId": "1234",
+      "fullName": "boy girl",
+      "email": "boygirl@gmail.com",
+      "password": "Helloworld@1234",
+      "role": "employee",
+      "id": "Hzbs8wot9_k"
+    },
+    {
+      "employeeId": "2345",
+      "fullName": "Coffe ",
+      "email": "coffe@gmail.com",
+      "password": "Coffe@1234",
+      "role": "employee",
+      "id": "qJ4LpjLAXVM"
     }
   ],
   "attendance": [
     {
       "id": "1",
-      "userId": 1,
+      "userId": "1",
       "date": "2026-07-01",
       "status": "Present"
     },
     {
       "id": "2",
-      "userId": 1,
+      "userId": "1",
       "date": "2026-07-02",
       "status": "Absent"
+    },
+    {
+      "id": "3",
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-01",
+      "status": "Present"
+    },
+    {
+      "id": "4",
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-02",
+      "status": "Present"
+    },
+    {
+      "id": "5",
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-03",
+      "status": "Half-day"
+    },
+    {
+      "id": "6",
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkOut": "2:17:22 pm"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:48:25 am",
+      "checkOut": null,
+      "id": "2zU3_vFLPgg"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:48:28 am",
+      "checkOut": null,
+      "id": "SFisniYwilA"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:49:10 am",
+      "checkOut": null,
+      "id": "Rxatyqsx-cs"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:49:12 am",
+      "checkOut": null,
+      "id": "81svw6qieRQ"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:49:12 am",
+      "checkOut": null,
+      "id": "by7o85Tpu58"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:49:34 am",
+      "checkOut": null,
+      "id": "-J3jdq6Grzo"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:49:35 am",
+      "checkOut": null,
+      "id": "G3krb-kUtlI"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:49:35 am",
+      "checkOut": null,
+      "id": "BHiqIDUP5XA"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:50:54 am",
+      "checkOut": null,
+      "id": "NC9szGYjXSQ"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:50:55 am",
+      "checkOut": null,
+      "id": "HOrOZCJ6fxI"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:50:56 am",
+      "checkOut": null,
+      "id": "Eb1fzSsRkoY"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:50:57 am",
+      "checkOut": null,
+      "id": "Mi6sVxf2cjk"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:53:57 am",
+      "checkOut": null,
+      "id": "hbv7yFcu5Eg"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:58:06 am",
+      "checkOut": null,
+      "id": "NFkw9xBeCoE"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "11:58:08 am",
+      "checkOut": null,
+      "id": "D2dmYEe-T-U"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "12:03:24 pm",
+      "checkOut": null,
+      "id": "RFuLjJtGV18"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "12:03:26 pm",
+      "checkOut": null,
+      "id": "LaRts6eszLA"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "12:03:30 pm",
+      "checkOut": null,
+      "id": "cVH1QOzvtgs"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "12:21:04 pm",
+      "checkOut": null,
+      "id": "NGvqYw4kwG0"
+    },
+    {
+      "userId": "YXBTP1zDhyo",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "12:29:33 pm",
+      "checkOut": "2:18:10 pm",
+      "id": "EXHu-5jWS-0"
+    },
+    {
+      "userId": "YXBTP1zDhyo",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "12:29:35 pm",
+      "checkOut": null,
+      "id": "W_SUwRt3nKw"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "1:44:22 pm",
+      "checkOut": null,
+      "id": "J-zqsu5kAd4"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "1:54:50 pm",
+      "checkOut": null,
+      "id": "0IULURlL8GE"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "1:54:51 pm",
+      "checkOut": null,
+      "id": "ahrf8f_kqOQ"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:04:23 pm",
+      "checkOut": null,
+      "id": "S-dGbpq9uiQ"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:04:28 pm",
+      "checkOut": null,
+      "id": "1AyIuY2EzLU"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:08:54 pm",
+      "checkOut": null,
+      "id": "ABmV9uqur7A"
+    },
+    {
+      "userId": "TcQaz-q8PKk",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:08:57 pm",
+      "checkOut": null,
+      "id": "8OWjeeynlzo"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:24:58 pm",
+      "checkOut": null,
+      "id": "ND2YKD9XarM"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:25:00 pm",
+      "checkOut": null,
+      "id": "-K_TTne0HxE"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:25:07 pm",
+      "checkOut": null,
+      "id": "UoalkveN57I"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:25:08 pm",
+      "checkOut": null,
+      "id": "IAi4wjTACF0"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:25:17 pm",
+      "checkOut": null,
+      "id": "r4uS8cZc-DY"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:25:19 pm",
+      "checkOut": null,
+      "id": "Ej9WoWIkGXg"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:26:06 pm",
+      "checkOut": null,
+      "id": "4CUe_qA9H2Y"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:26:06 pm",
+      "checkOut": null,
+      "id": "_AEO1UgLsrU"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:26:07 pm",
+      "checkOut": null,
+      "id": "VsFYV5Lf_RA"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:26:07 pm",
+      "checkOut": null,
+      "id": "5gY3s2bvRnE"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:26:07 pm",
+      "checkOut": null,
+      "id": "4BxWHmRw5T8"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:31:38 pm",
+      "checkOut": null,
+      "id": "b-4hjYY6AGc"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:31:39 pm",
+      "checkOut": null,
+      "id": "xiwC9rM3NmU"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:31:44 pm",
+      "checkOut": null,
+      "id": "BjtyYccRHfA"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:31:45 pm",
+      "checkOut": null,
+      "id": "TbMAT70_jCc"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:31:45 pm",
+      "checkOut": null,
+      "id": "gDSoup76glM"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:31:46 pm",
+      "checkOut": null,
+      "id": "UbCFDIlNCn4"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:31:46 pm",
+      "checkOut": null,
+      "id": "yZbzymfP8t8"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:31:46 pm",
+      "checkOut": null,
+      "id": "VpXcnH_5INw"
+    },
+    {
+      "userId": "Hzbs8wot9_k",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:32:12 pm",
+      "checkOut": "2:32:13 pm",
+      "id": "BI4HZjterPg"
+    },
+    {
+      "userId": "qJ4LpjLAXVM",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:34:09 pm",
+      "checkOut": "2:34:14 pm",
+      "id": "Qom6a88ioJA"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:55:59 pm",
+      "checkOut": null,
+      "id": "53RuRVc3lvQ"
+    },
+    {
+      "userId": "2",
+      "date": "2026-07-04",
+      "status": "Present",
+      "checkIn": "2:56:01 pm",
+      "checkOut": null,
+      "id": "M7Bfk37SV48"
     }
   ],
   "leaveRequests": [
     {
       "id": "1",
-      "userId": 1,
+      "userId": "1",
       "leaveType": "Sick",
       "startDate": "2026-07-10",
       "endDate": "2026-07-12",
-      "status": "Pending"
+      "status": "Rejected"
+    },
+    {
+      "id": "2",
+      "userId": "TcQaz-q8PKk",
+      "leaveType": "Paid",
+      "startDate": "2026-07-15",
+      "endDate": "2026-07-16",
+      "status": "Rejected"
+    },
+    {
+      "id": "3",
+      "userId": "TcQaz-q8PKk",
+      "leaveType": "Sick",
+      "startDate": "2026-06-20",
+      "endDate": "2026-06-21",
+      "status": "Approved"
+    },
+    {
+      "userId": "2",
+      "leaveType": "Paid",
+      "startDate": "2026-07-14",
+      "endDate": "2026-07-28",
+      "remarks": "jfdjfajlakj",
+      "status": "Rejected",
+      "id": "X1I1I6PmZng"
     }
   ],
   "payroll": [
     {
       "id": "1",
-      "userId": 1,
+      "userId": "1",
       "baseSalary": 50000,
       "deductions": 2000,
       "netSalary": 48000
+    },
+    {
+      "id": "2",
+      "userId": "TcQaz-q8PKk",
+      "baseSalary": 45000,
+      "deductions": 1500,
+      "netSalary": 43500
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -16,18 +16,16 @@ function SignIn() {
     setLoading(true)
 
     try {
-      // json-server doesn't have real login, so we query and check manually
-      const res = await api.get(`/users?email=${email}`)
-      const user = res.data[0]
+      const res = await api.post('/auth/login', {
+        email,
+        password,
+      })
 
-      if (!user || user.password !== password) {
-        setError('Incorrect email or password')
-        setLoading(false)
-        return
-      }
-
-      // Save logged-in user so other pages know who's active
+      const { user, token } = res.data
       localStorage.setItem('currentUser', JSON.stringify(user))
+      if (token) {
+        localStorage.setItem('token', token)
+      }
 
       if (user.role === 'admin') {
         navigate('/admin')
@@ -35,7 +33,12 @@ function SignIn() {
         navigate('/dashboard')
       }
     } catch (err) {
-      setError('Something went wrong. Is json-server running?')
+      if (err.response?.data?.message) {
+        setError(err.response.data.message)
+      } else {
+        setError('Something went wrong. Please check if the server is running.')
+      }
+    } finally {
       setLoading(false)
     }
   }
