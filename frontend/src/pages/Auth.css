@@ -3,22 +3,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f4f5f7;
+  background: var(--color-bg, #f4f5f7);
 }
 
 .auth-card {
   background: white;
   padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(16, 24, 40, 0.12);
   width: 100%;
   max-width: 380px;
+  animation: cardIn 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .auth-card h1 {
   font-size: 24px;
   margin-bottom: 4px;
   color: #1a1a1a;
+  font-weight: 700;
 }
 
 .auth-subtitle {
@@ -36,19 +43,23 @@
   margin-top: 16px;
 }
 
-.auth-card input {
+.auth-card input,
+.auth-card select {
   width: 100%;
   padding: 10px 12px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
   font-size: 14px;
   box-sizing: border-box;
+  background: white;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.auth-card input:focus {
+.auth-card input:focus,
+.auth-card select:focus {
   outline: none;
   border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 .auth-card button {
@@ -62,11 +73,23 @@
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.auth-card button:hover:not(:disabled) {
+  background: #1d4ed8;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.auth-card button:active:not(:disabled) {
+  transform: scale(0.98);
 }
 
 .auth-card button:disabled {
   background: #93c5fd;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .auth-error {
@@ -76,6 +99,13 @@
   border-radius: 8px;
   font-size: 13px;
   margin-bottom: 8px;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
 }
 
 .auth-footer {
@@ -88,20 +118,9 @@
 .auth-footer a {
   color: #2563eb;
   text-decoration: none;
+  font-weight: 500;
 }
 
-.auth-card select {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 14px;
-  box-sizing: border-box;
-  background: white;
-}
-
-.auth-card select:focus {
-  outline: none;
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+.auth-footer a:hover {
+  text-decoration: underline;
 }
